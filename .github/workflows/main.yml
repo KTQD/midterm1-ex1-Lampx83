@@ -21,10 +21,8 @@ jobs:
 
     - name: Compile Java
       run: |
-        javac src/MP3.java
-        javac src/Book.java
-        javac src/Item.java
-        javac src/Main.java
+        mkdir -p bin # Tạo thư mục để lưu trữ các file .class sau khi biên dịch
+        javac -d bin $(find src -name '*.java') # Tìm và biên dịch tất cả các file .java trong thư mục src
 
     - name: Run Java
       run: java -cp src Main

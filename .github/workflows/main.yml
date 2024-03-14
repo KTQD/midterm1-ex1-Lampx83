@@ -20,10 +20,11 @@ jobs:
         distribution: 'adopt'
 
     - name: Compile Java
-      run: javac src/Main.java
-      run: javac src/MP3.java
-      run: javac src/Book.java
-      run: javac src/Item.java
+      run: |
+        javac src/Main.java
+        javac src/MP3.java
+        javac src/Book.java
+        javac src/Item.java
 
     - name: Run Java
       run: java -cp src Main

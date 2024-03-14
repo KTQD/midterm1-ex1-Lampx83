@@ -20,9 +20,7 @@ jobs:
         distribution: 'adopt'
 
     - name: Compile Java
-      run: |
-        mkdir -p bin # Tạo thư mục để lưu trữ các file .class sau khi biên dịch
-        javac -d bin $(find src -name '*.java') # Tìm và biên dịch tất cả các file .java trong thư mục src
+      run: javac src/*.java -d build
 
     - name: Run Java
-      run: java -cp src Main
+      run: java -cp build Main

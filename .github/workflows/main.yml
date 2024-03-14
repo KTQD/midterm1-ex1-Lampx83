@@ -21,10 +21,10 @@ jobs:
 
     - name: Compile Java
       run: |
-        javac src/Main.java
         javac src/MP3.java
         javac src/Book.java
         javac src/Item.java
+        javac src/Main.java
 
     - name: Run Java
       run: java -cp src Main
